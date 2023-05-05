@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//stringa
+Route::get('/stringa', function () {
+    return 'Ciao sono una stringa';
+});
+
+//intero
+Route::get('/123', function () {
+    return 123;
+});
+
+//array
+
+Route::get('/array', function () {
+    $arr = [1, 2, 3];
+    return $arr;
+});
