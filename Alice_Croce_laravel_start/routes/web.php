@@ -33,3 +33,16 @@ Route::get('/array', function () {
     $arr = [1, 2, 3];
     return $arr;
 });
+
+
+Route::get('/chi-siamo', function () {
+    return view('chisiamo');
+});
+
+Route::get('/contatti', function () {
+    return view('contatti');
+});
+
+Route::get('/storia', function () {
+    return view('storia');
+});
