@@ -98,7 +98,7 @@ class pageCotroller extends Controller
             //dd($flight);
             if ($ref == $flight['id']) {
 
-                return view('dettagliovolo', ['volo' => $flight]); //deve passare tutti i dettaggli
+                return view('dettagliovolo', ['volo' => $flight]); //deve passare tutti i dettagli
 
             }
         }

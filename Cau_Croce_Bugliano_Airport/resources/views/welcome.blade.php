@@ -49,7 +49,7 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="#home">Home</a></li>
                     <li><a class="nav-link scrollto" href="{{ route('voli') }}">I nostri voli</a></li>
                     <li><a class="nav-link scrollto" href="#">I servizi aeroportuali</a></li>
                     <li><a class="nav-link scrollto" href="#">Contattaci</a></li>

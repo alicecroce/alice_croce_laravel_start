@@ -34,6 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </body>
 </head>
 
@@ -47,7 +48,7 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto" href="">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#home">Home</a></li>
                     <li><a class="nav-link scrollto active" href="{{ route('voli') }}">I nostri voli</a></li>
                     <li><a class="nav-link scrollto" href="#">I servizi aeroportuali</a></li>
                     <li><a class="nav-link scrollto" href="#">Contattaci</a></li>
@@ -76,150 +77,89 @@
                             <div class="col-3">
                                 <h5>Città</h5>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <h5>Orario</h5>
                             </div>
                             <div class="col-3">
                                 <h5>Compagnia</h5>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <h5>Gate</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Info</h5>
                             </div>
                         </div>
                         @foreach ($voli['departure'] as $volo)
                             <div class="row">
-                                <p class="col-3">
+                                <div class="col-3">
                                     {{ $volo['city'] }}
-                                </p>
-                                <p class="col-3">
+                                </div>
+                                <div class="col-2">
                                     {{ $volo['time'] }}
-                                </p>
-                                <p class="col-3">
+                                </div>
+                                <div class="col-3">
                                     {{ $volo['company'] }}
-                                </p>
-                                <p class="col-3">
+                                </div>
+                                <div class="col-2">
                                     {{ $volo['gate'] }}
-                                </p>
-                                <p class="col-3">
-                                    <a href="{{ route('dettagliovolo', $volo['id']) }}">Dettagli</a>
-                                </p>
+                                </div>
+                                <div class="col-2">
+                                    <a href="{{ route('dettagliovolo', $volo['id']) }}">
+                                        <i class="bi bi-info-circle"></i></a>
+                                </div>
                             </div>
                         @endforeach
-
-
-
-
-
-
-
-
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                        <span>Arrivi</span>
+                        <div class="row">
+                            <div class="col-3">
+                                <h5>Città</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Orario</h5>
+                            </div>
+                            <div class="col-3">
+                                <h5>Compagnia</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Gate</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Info</h5>
+                            </div>
+                        </div>
+                        @foreach ($voli['arrival'] as $volo)
+                            <div class="row">
+                                <div class="col-3">
+                                    {{ $volo['city'] }}
+                                </div>
+                                <div class="col-2">
+                                    {{ $volo['time'] }}
+                                </div>
+                                <div class="col-3">
+                                    {{ $volo['company'] }}
+                                </div>
+                                <div class="col-2">
+                                    {{ $volo['gate'] }}
+                                </div>
+                                <div class="col-2">
+                                    <a href="{{ route('dettagliovolo', $volo['id']) }}">
+                                        <i class="bi bi-info-circle"></i></a>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="box" data-aos="zoom-in" data-aos-delay="200">
-                        <span>02</span>
-                        <h4>Repellat Nihil</h4>
-                        <p>
-                            Dolorem est fugiat occaecati voluptate velit esse. Dicta
-                            veritatis dolor quod et vel dire leno para dest
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
-    <!-- I nostri voli -->
 
 
-
-
-
-
-
-
-
-
-
-
-    <!-- codice con mattia -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-6 text-center bg-secondary-subtle">
-                <h2>Partenze</h2>
-                <div class="row">
-                    <div class="col-3">
-                        <h5>Città</h5>
-                    </div>
-                    <div class="col-2">
-                        <h5>Orario</h5>
-                    </div>
-                    <div class="col-2">
-                        <h5>Compagnia</h5>
-                    </div>
-                    <div class="col-2">
-                        <h5>Gate</h5>
-                    </div>
-                </div>
-                @foreach ($voli['departure'] as $volo)
-                    <div class="row">
-                        <div class="col-3">
-                            {{ $volo['city'] }}
-                        </div>
-                        <div class="col-2">
-                            {{ $volo['time'] }}
-                        </div>
-                        <div class="col-2">
-                            {{ $volo['company'] }}
-                        </div>
-                        <div class="col-2">
-                            {{ $volo['gate'] }}
-                        </div>
-                        <div class="col-2">
-                            <a href="{{ route('dettagliovolo', $volo['id']) }}">Dettagli</a>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-            <div class="col-6 text-center bg-secondary">
-                <h3>Arrivi</h3>
-                <div class="row">
-                    <div class="col-3">
-                        <h5>Città</h5>
-                    </div>
-                    <div class="col-2">
-                        <h5>Orario</h5>
-                    </div>
-                    <div class="col-2">
-                        <h5>Compagnia</h5>
-                    </div>
-                    <div class="col-2">
-                        <h5>Gate</h5>
-                    </div>
-                </div>
-                @foreach ($voli['arrival'] as $volo)
-                    <div class="row">
-                        <div class="col-3">
-                            {{ $volo['city'] }}
-                        </div>
-                        <div class="col-2">
-                            {{ $volo['time'] }}
-                        </div>
-                        <div class="col-2">
-                            {{ $volo['company'] }}
-                        </div>
-                        <div class="col-2">
-                            {{ $volo['gate'] }}
-                        </div>
-                        <div class="col-2">
-                            <button>Dettagli</button>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
 
 
     <!-- ======= Footer ======= -->
