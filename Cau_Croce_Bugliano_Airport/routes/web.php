@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/home', [pageCotroller::class, 'homepage'])->name('hompage');
+Route::get('/', [pageCotroller::class, 'homepage'])->name('hompage');
 Route::get('/voli', [pageCotroller::class, 'insideFlights'])->name('voli');
 //Route::get('/voli/{id}', [pageCotroller::class, 'voli'])->name('dettagliovolo'); //pagina che recupera l'id
 Route::get('/dettagliovolo/{id}', [pageCotroller::class, 'voli'])->name('dettagliovolo');//nuova pagina con i dettagli del volo
